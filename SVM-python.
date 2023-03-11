@@ -48,7 +48,7 @@ plt.contourf(x1, x2, classifier.predict(np.array([x1.ravel(), x2.ravel()]).T).re
 alpha = 0.75, cmap = ListedColormap(('red', 'green')))  
 plt.xlim(x1.min(), x1.max())  
 plt.ylim(x2.min(), x2.max())  
-for i, j in enumerate(nm.unique(y_set)):  
+for i, j in enumerate(np.unique(y_set)):  
     plt.scatter(x_set[y_set == j, 0], x_set[y_set == j, 1],  
         c = ListedColormap(('red', 'green'))(i), label = j)  
 plt.title('SVM classifier (Training set)')  
